@@ -1,27 +1,17 @@
 package lab2;
 
 import javax.swing.JOptionPane;
-
-/**
- * Describe responsibilities here.
- *
- * @author      your name goes here
- * @version     1.00
- */
-public class IntroToProgrammingCourse {
+public class IntroToProgrammingCourse implements ProgrammingCourse {
     private String courseName;
     private String courseNumber;
     private double credits;
-
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
-    }
-
+    private String prerequisites;
+    
+    @Override
     public String getCourseNumber() {
         return courseNumber;
     }
-
+    @Override
     public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -30,11 +20,11 @@ public class IntroToProgrammingCourse {
         }
         this.courseNumber = courseNumber;
     }
-
+    @Override
     public double getCredits() {
         return credits;
     }
-
+    @Override
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
@@ -43,11 +33,11 @@ public class IntroToProgrammingCourse {
         }
         this.credits = credits;
     }
-
+    @Override
     public String getCourseName() {
         return courseName;
     }
-
+    @Override
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -55,6 +45,14 @@ public class IntroToProgrammingCourse {
             System.exit(0);
         }
         this.courseName = courseName;
+    }
+    @Override
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+    @Override
+    public void setPrerequisites(String prerequisites) {
+
     }
 
     
