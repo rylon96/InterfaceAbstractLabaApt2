@@ -1,18 +1,9 @@
 package lab1.altLab1;
 public abstract class ProgrammingCourse {
-   private final String courseName;
-   private final String courseNumber;
-   private final double credits;
-   private final String prerequisites;
-
-    public ProgrammingCourse(String courseName, String courseNumber, double credits, String prerequisites) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-        this.credits = credits;
-        this.prerequisites = prerequisites;
-    }
-
-    
+   private String courseName;
+   private String courseNumber;
+   private double credits;
+   private String prerequisites;    
 
     public final String getCourseName() {
         return courseName;
